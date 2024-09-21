@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: '文本比较',
       theme: ThemeData(
+        fontFamily: 'system-ui',
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
         scaffoldBackgroundColor: Colors.white,
         appBarTheme: AppBarTheme(
