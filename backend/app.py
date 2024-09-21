@@ -82,5 +82,9 @@ def compare():
     result = compare_texts(text1, text2, ignore_whitespace, ignore_punctuation, custom_rules)
     return jsonify(result)
 
+@app.route('/api/compare', methods=['GET'])
+def test_api():
+    return jsonify({"message": "API is working"}), 200
+
 if __name__ == '__main__':
     app.run(debug=True)
