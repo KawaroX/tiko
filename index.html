@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Test Page</title>
+  <!-- ... 其他头部内容 ... -->
+  <script>
+    console.log('HTML loaded');
+    window.addEventListener('load', function() {
+      console.log('Window loaded');
+      document.body.innerHTML += '<p>Page loaded</p>';
+    });
+  </script>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>If you can see this, static file serving is working.</p>
+  <h1>Debug Page</h1>
+  <p>If you can see this, HTML is loading correctly.</p>
+  <!-- ... 其他 body 内容 ... -->
 </body>
 </html>
