@@ -33,6 +33,7 @@ dependencies:
   http: ^0.13.5
   google_fonts: ^4.0.3
   flutter_animate: ^4.1.1+1
+  url_launcher: ^6.0.12
 
 
 

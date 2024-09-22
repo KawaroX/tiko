@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(MyApp());
@@ -112,6 +113,13 @@ class _TextComparisonPageState extends State<TextComparisonPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('文本比较'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.code),
+            tooltip: 'View on GitHub',
+            onPressed: () => _launchURL('https://github.com/KawaroX/tiko'),
+          ),
+        ],
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
@@ -189,6 +197,13 @@ class _TextComparisonPageState extends State<TextComparisonPage> {
         ),
       ),
     );
+  }
+  void _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }
 
